@@ -1,0 +1,202 @@
+:root {
+    --bar-stopper-gradient: linear-gradient(to bottom,
+            rgba(218, 218, 218, 0.73) 0px,
+            rgba(101, 101, 101, 0.73) 8px,
+            rgba(151, 150, 150, 0.73) 10px,
+            rgb(222, 218, 218) 15px,
+            rgb(169, 166, 166) 20px,
+            rgba(0, 0, 0, 1) 20px,
+            rgba(0, 0, 0, 1) 22px,
+            rgb(101, 99, 99) 25px);
+    --side-bar-gradient: linear-gradient(to bottom,
+            rgba(218, 218, 218, 0.73) 0px,
+            rgba(101, 101, 101, 0.73) 8px,
+            rgba(146, 144, 144, 0.73) 10px,
+            rgb(242, 239, 239) 12px,
+            rgb(242, 239, 239) 14px,
+            rgba(0, 0, 0, 1) 15px,
+            rgba(0, 0, 0, 1) 17px,
+            rgb(227, 222, 222) 20px,
+            rgb(87, 87, 87) 23px);
+
+    --middle-bar-gradient: linear-gradient(to bottom,
+            rgba(108, 104, 104, 0.9),
+            rgba(173, 172, 172, .9) 4px,
+            rgba(153, 149, 149, 0.9) 5px,
+            rgba(131, 129, 129, .9) 6px,
+            rgba(180, 170, 170, 0.9) 7px,
+            rgba(173, 172, 172, .9) 8px,
+            rgba(142, 136, 136, 0.9) 9px,
+            rgba(173, 172, 172, .9) 10px,
+            rgba(122, 120, 120, 0.9) 11px,
+            rgba(173, 172, 172, .9) 12px,
+            rgba(126, 122, 122, 0.9) 13px,
+            rgba(173, 172, 172, .9) 14px,
+            rgba(0, 0, 0, 1) 15px,
+            rgba(0, 0, 0, 1) 16px,
+            rgba(139, 135, 135, 0.9) 20px,
+            rgba(94, 93, 93, 0.9) 22px);
+
+    --weight-width: 35px;
+    --right-weight-gradient: linear-gradient(to right, transparent 33px, black 2px);
+    --left-weight-gradient: linear-gradient(to right, black 2px,
+            transparent 3px);
+    --screw-gradient-y: linear-gradient(to right,
+            rgb(195, 194, 194) 0px,
+            rgb(180, 176, 176) 1px,
+            rgb(132, 132, 132) 2px,
+            rgb(132, 132, 132) 6px,
+            rgb(216, 214, 214) 8px);
+
+    /* height of screw is 35px */
+    --screw-gradient-x: linear-gradient(to bottom,
+            transparent 0px,
+            transparent 1px,
+            rgb(29, 27, 27) 2px 2.5px,
+            transparent 3px 5px,
+            rgb(29, 27, 27) 5px 7px,
+            transparent 8px 10px,
+            rgb(70, 70, 70) 11px 12px,
+            transparent 12px 16px,
+            rgb(29, 27, 27) 17px 21px,
+            transparent 24px 27px,
+            rgb(211, 207, 207) 28px 29px,
+            rgb(67, 63, 63) 29px 31px,
+            transparent 33px,
+            rgb(67, 63, 63) 34.5px);
+
+
+    --middle-weight-gradient: linear-gradient(to bottom,
+            rgb(69, 67, 67) 0%,
+            rgba(0, 0, 0, 1) 18%,
+            rgba(0, 0, 0, 1) 25%,
+            rgba(134, 124, 124, 1) 40%,
+            rgba(0, 0, 0, 1) 75%,
+            rgba(0, 0, 0, 1) 80%,
+            rgb(45, 44, 44) 90%,
+            rgba(0, 0, 0, 1) 95%);
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 400px;
+    height: 200px;
+}
+
+.left-screw {
+    width: 8px;
+    height: 35px;
+    border-radius: 2px 0px 0px 2px;
+    background-image: var(--screw-gradient-x),
+        var(--screw-gradient-y);
+
+}
+
+.left-outter-weight {
+    height: 55%;
+    width: var(--weight-width);
+    border-radius: 3px;
+    background: var(--left-weight-gradient),
+        var(--right-weight-gradient),
+        var(--middle-weight-gradient);
+}
+
+.left-inner-weight {
+    height: 80%;
+    width: var(--weight-width);
+    border-radius: 3px;
+    background: var(--left-weight-gradient),
+        var(--right-weight-gradient),
+        var(--middle-weight-gradient);
+
+}
+
+
+.left-bar-stopper {
+    height: 30px;
+    width: 6px;
+    background-image: var(--bar-stopper-gradient);
+}
+
+.middle-bar {
+    position: relative;
+    width: 140px;
+    height: 23px;
+    background-image: var(--middle-bar-gradient);
+}
+
+
+.right-bar-stopper {
+    height: 30px;
+    width: 6px;
+    background-image: var(--bar-stopper-gradient);
+
+}
+
+.right-inner-weight {
+    height: 80%;
+    width: var(--weight-width);
+    border-radius: 3px;
+    background: var(--left-weight-gradient),
+        var(--right-weight-gradient),
+        var(--middle-weight-gradient);
+
+}
+
+.right-outter-weight {
+    height: 55%;
+    width: var(--weight-width);
+    border-radius: 3px;
+    background: var(--left-weight-gradient),
+        var(--right-weight-gradient),
+        var(--middle-weight-gradient);
+
+}
+
+.right-screw {
+    width: 8px;
+    height: 35px;
+    border-radius: 0px 2px 2px 0px;
+    background-image: var(--screw-gradient-x),
+        var(--screw-gradient-y);
+}
+
+.right-bar {
+    height: 23px;
+    width: 15px;
+    border-radius: 0px 3px 3px 0px;
+    background-image:
+        repeating-linear-gradient(100deg,
+            rgb(44, 43, 43),
+            rgb(44, 43, 43) 2px,
+            transparent 2px,
+            transparent 6px),
+        var(--side-bar-gradient)
+}
+
+.left-bar {
+    height: 23px;
+    width: 15px;
+    border-radius: 3px 0px 0px 3px;
+    background-image:
+        repeating-linear-gradient(-100deg,
+            rgba(44, 43, 43, 1),
+            rgba(44, 43, 43, 1) 2px,
+            transparent 2px,
+            transparent 6px),
+        var(--side-bar-gradient)
+}
